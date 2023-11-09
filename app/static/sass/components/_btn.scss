@@ -1,0 +1,78 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: calc(#{fluid(1.6rem, 2rem)});
+    padding: 1.6rem 4rem;
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @include respond(phone-port) {
+      padding: 1.2rem 2.8rem;
+    }
+  }
+
+  &,
+  &--hero:link,
+  &--hero:visited,
+  &--form:link,
+  &--form:visited {
+    background-image: linear-gradient(
+      to right top,
+      var(--color-h1-h2-4) 20%,
+      var(--color-h1-h2-3) 50%,
+      var(--color-h1-h2-2) 70%,
+      var(--color-h1-h2-1) 90%
+    );
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    font-weight: 500;
+
+    box-shadow: var(--shadow-dark);
+    align-self: flex-end;
+    justify-self: start; // to make the btn to not stretch
+  }
+
+  &--hero:hover,
+  &--hero:active,
+  &--form:hover,
+  &--form:active {
+    transform: translateY(-3px);
+
+    background-image: linear-gradient(
+      to left bottom,
+      var(--color-h1-h2-4) 20%,
+      var(--color-h1-h2-3) 50%,
+      var(--color-h1-h2-2) 70%,
+      var(--color-h1-h2-1) 90%
+    );
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--default-font-size);
+    color: var(--color-primary);
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-primary);
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    transform: translateX(3px);
+    box-shadow: var(--shadow-light);
+    text-shadow: var(--color-h1-h2-4) 1px 0 2rem;
+  }
+}

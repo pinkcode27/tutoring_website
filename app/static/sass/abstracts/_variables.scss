@@ -1,0 +1,66 @@
+:root {
+  // CSS CUSTOM PROPERTIES
+  --font-primary: "Montserrat", sans-serif;
+
+  --default-font-size: 1.6rem;
+  --color-primary: #332c33;
+  --color-secondary: #e3fafe;
+
+  --color-bg-1: #b9f3fc;
+  --color-bg-2: #fdf7c3;
+  --color-bg-3: #aee2ff;
+  --color-bg-4: #fedeff;
+
+  --color-label-form: #4a6165; // CHECK WHERE AM I USING IT
+  --color-placeholder: #82aab0;
+  --color-caption: #f7fcff;
+
+  --color-heart: #ff0000;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-grey-dark: #777;
+
+  --color-h1-h2-1: #eec461;
+  --color-h1-h2-2: #ff87b2;
+  --color-h1-h2-3: #8a66cd;
+  --color-h1-h2-4: #1cd6ce;
+
+  --color-bg-about: #e3fafe;
+  --color-about: #253132;
+
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --shadow-dark: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+$font-primary: "Montserrat", sans-serif;
+$color-secondary: #e3fafe;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-bg-1: #b9f3fc;
+$color-bg-2: #fdf7c3;
+$color-bg-3: #aee2ff;
+$color-bg-4: #fedeff;
+
+$color-focus: #fffef9;
+
+$screen468: 29.25em;
+$screen568: 35.5em;
+$screen768: 48em;
+$screen834: 52.125em;
+$screen1024: 64em;
+$screen1200: 75em;
+$screen1600: 100em;
+
+/*
+The above calculations are based on the next logic:
+
+screen size in pixels / 16px (bc 16px is the default size of the browser) = screen width in em
+
+bp = breakpoint
+we want 1em = 16px
+Queries only work when using SASS variables and not with Custom var
+*/

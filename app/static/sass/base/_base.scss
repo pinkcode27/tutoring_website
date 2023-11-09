@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-image: radial-gradient(
+    farthest-corner at 4rem 4rem,
+    var(--color-bg-1),
+    var(--color-bg-2),
+    var(--color-bg-3),
+    var(--color-bg-4)
+  );
+}
+
+::selection {
+  background-color: var(--color-bg-2);
+  color: var(--color-primary);
+}

@@ -1,0 +1,77 @@
+.cta {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-bg-3, 0.9) 0%,
+      rgba($color-bg-3, 0.9) 55%,
+      transparent 55%
+    ),
+    url("../img/contact-1x-comp.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3rem;
+  box-shadow: var(--shadow-dark);
+
+  @media (min-resolution: 192dpi) and (min-width: $screen1200),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen1200),
+    (min-width: $screen1600){
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-bg-3, 0.9) 0%,
+        rgba($color-bg-3, 0.9) 55%,
+        transparent 55%
+      ),
+      url(../img/contact-2x-comp.jpg);
+  }
+
+  @include respond(small-laptop) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-bg-3, 0.9) 0%,
+        rgba($color-bg-3, 0.9) 60%,
+        transparent 60%
+      ),
+      url("../img/contact-1x-comp.jpg");
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-bg-3, 0.9) 0%,
+        rgba($color-bg-3, 0.9) 70%,
+        transparent 70%
+      ),
+      url("../img/contact-1x-comp.jpg");
+  }
+
+  @media (min-resolution: 192dpi) and (max-width: $screen1024),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen1024) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-bg-3, 0.9) 0%,
+        rgba($color-bg-3, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/contact-2x-comp.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-bg-3, 0.8) 0%,
+        rgba($color-bg-3, 0.8) 100%
+      ),
+      url("../img/contact-1x-comp.jpg");
+  }
+
+  &__form {
+    padding: 4rem;
+    color: var(--color-primary);
+
+    display: grid;
+    grid-template-columns: minmax(20rem, 40rem);
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+  }
+}

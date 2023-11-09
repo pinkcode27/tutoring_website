@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'header.html' %}
+
+<!-- Hero section -->
+<section class="section-hero" style="background-image: linear-gradient(
+      to right bottom,
+      rgba(174, 226, 255, 0.5),
+      rgba(174, 226, 255, 0.5)
+    ), url({{url_for('static', filename='img/hero-bg-2x-comp.jpg')}} )";>
+    <div class="hero hero__sent">
+        <div class="txt-center">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <h1 class="heading-1">
+                {{ message }}
+            </h1>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</section>
+{% include 'footer.html' %}
+{% endblock %}

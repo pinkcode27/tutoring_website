@@ -1,0 +1,31 @@
+.mb-xs {
+  margin-bottom: 1rem !important;
+}
+
+.mb-sm {
+  margin-bottom: 2rem !important;
+}
+
+.mb-md {
+  margin-bottom: 3rem !important;
+}
+
+.mb-lg {
+  margin-bottom: 4rem !important;
+}
+
+.mb-xl {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 6rem !important;
+  }
+
+  @include respond(phone-land) {
+    margin-bottom: 4rem !important;
+  }
+}
+
+.txt-center {
+  text-align: center;
+}

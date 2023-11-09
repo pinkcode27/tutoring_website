@@ -1,0 +1,59 @@
+.form {
+  &__text {
+    h2 {
+      font-size: calc(#{fluid(2.4rem, 5.2rem)});
+    }
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    display: block;
+    font-size: 1.2rem;
+    color: inherit;
+    font-weight: 700;
+    margin-left: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    display: block;
+    width: 90%;
+    padding: 1.2rem;
+    font-size: calc(#{fluid(1.6rem, 1.8rem)});
+    border: none;
+    border-radius: 1rem;
+    font-family: inherit;
+    color: inherit;
+    background-color: rgba($color-secondary, 0.5);
+    -webkit-backdrop-filter: blur(2rem) saturate(1.7);
+    backdrop-filter: blur(2rem) saturate(1.7);
+    box-shadow: 0 1px 2px rgba($color-black, 0.1);
+    border-bottom: 3px solid transparent; // to avoid the jumping from the focus bottom
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.6rem rgba($color-focus, 0.5);
+      border-bottom: 3px solid var(--color-h1-h2-2);
+    }
+  }
+
+  input::placeholder,
+  select::placeholder,
+  textarea::placeholder {
+    color: var(--color-placeholder);
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}

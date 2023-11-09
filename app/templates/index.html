@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'header.html' %}
+    <!-- Beginning of Hero section -->
+    <section class="section-hero" style="background-image: linear-gradient(
+      to right bottom,
+      rgba(174, 226, 255, 0.5),
+      rgba(174, 226, 255, 0.5)
+    ), url({{ url_for('static', filename=hero_bg_img) }} )";>
+      <div class="hero">
+        <div class="hero__content">
+          <h1 class="heading-1 hero__title mb-xs">
+            {{ _('Elevate Your Learning With Expert Tutoring.') }}
+          </h1>
+          <p class="paragraph hero__text mb-md">
+            {{ _('With over a decade of experience in education, our tutoring service company
+            has a proven track record of helping students achieve academic excellence.
+            We empower students on their journey to success, setting a gold standard
+            in educational achievement.') }}
+          </p>
+          <a href="#cta" class="btn btn--hero">{{ _('Get Started') }}</a>
+        </div>
+
+        <div class="hero__picture">
+          <p class="hero__heading">
+            <span class="hero__heading-span">{{ _('The learner explorer') }}</span>
+          </p>
+
+          <figure class="hero__item hero__item--1">
+            <img
+              srcset="{{ url_for('static', filename='img/hero-1-1x.png') }} 368w, {{ url_for('static', filename='img/hero-1-2x.webp') }} 1600w"
+              sizes="(max-width: 75em) 46vw, (max-width: 64em) 83vw,
+                     (max-width: 52.125em) 92vw, (max-width: 48em) 71vw,
+                     (max-width: 35.5em) 77vw, (max-width: 29.25em) 74vw"
+              alt="Illustration of a woman surrounded with technology"
+              class="hero__img"
+              loading="lazy"
+              src="{{ url_for('static', filename='img/hero-1-1x.png') }}"
+            />
+          </figure>
+          <figure class="hero__item hero__item--2">
+            <img
+              srcset="{{ url_for('static', filename='img/hero-2-1x.webp') }} 1x, {{ url_for('static', filename='img/hero-2-2x-comp.png') }} 2x"
+              alt="the percentage symbol"
+              class="hero__img"
+              loading="lazy"
+              src="{{ url_for('static', filename='img/hero-2-1x.png') }}"
+            />
+          </figure>
+          <figure class="hero__item hero__item--3">
+            <img
+              srcset="{{ url_for('static', filename='img/hero-2-1x.webp') }} 1x, {{ url_for('static', filename='img/hero-2-2x-comp.png') }} 2x"
+              alt="the percentage symbol"
+              class="hero__img"
+              loading="lazy"
+              src="{{ url_for('static', filename='img/hero-2-1x.png') }}"
+            />
+          </figure>
+          <figure class="hero__item hero__item--4">
+            <img
+              srcset="{{ url_for('static', filename='img/hero-3-1x.png') }} 1x, {{ url_for('static', filename='img/hero-3-2x-comp.png') }} 2x"
+              alt="an open book with a magnifying glass on top of it"
+              class="hero__img"
+              loading="lazy"
+              src="{{ url_for('static', filename='img/hero-3-1x.png') }}"
+            />
+          </figure>
+          <figure class="hero__item hero__item--5">
+            <img
+              srcset="{{ url_for('static', filename='img/hero-4-1x.png') }} 1x, {{ url_for('static', filename='img/hero-4-2x-comp.png') }} 2x"
+              alt="an open folder with sheets and a magnifying glass on top of it"
+              class="hero__img"
+              loading="lazy"
+              src="{{ url_for('static', filename='img/hero-4-1x.png') }}"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beginning of About Me section -->
+    <section class="section-about" id="about">
+      <div class="about mb-xl">
+        <div class="about__title mb-lg txt-center">
+          <h2 class="heading-2 heading-2--display">{{ _('About Me') }}</h2>
+        </div>
+
+        <figure class="about__shape">
+          <img
+                  srcset="{{ url_for('static', filename='img/me-1x-comp.jpg') }} 1x, {{ url_for('static', filename='img/me-2x-comp.jpg') }} 2x"
+
+            alt="My profile picture"
+            class="about__img txt-center"
+                  src="{{ url_for('static', filename='img/me-2x.png') }}"
+          />
+          <figcaption class="about__caption txt-center">Elena Murga</figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="paragraph mb-sm">
+            {{ _("Welcome to my tutoring and coaching services! I'm Elena, a dedicated
+            tutor with over a decade of experience in math, English, MS Excel,
+            Python, and web development. I hold a Bachelor's in Information
+            Technology and Industrial Engineering, and an Associate's in Math
+            Education. I'm fluent in English and Spanish, and all sessions are
+            bilingual.") }}
+          </p>
+          <p class="paragraph mb-sm">
+            {{ _("I'm here to support all students on their academic journey,
+            regardless of their background. Whether you need help with homework,
+            want to learn a new programming language, or aim to improve your
+            English skills. I've had the privilege of working with students from
+            all levels of ability, including students from prestigious South
+            Florida private schools like Ransom Everglades and Miami Country
+            Day. I'm confident that together, we can achieve your goals. Don't
+            hesitate to reach out and start your learning journey with me today!") }}
+          </p>
+        </div>
+      </div>
+      <div class="txt-center">
+        <a
+          href="https://www.linkedin.com/in/elena-murga-27710b1a4"
+          class="btn-text"
+          target="_blank"
+          title="linkedin"
+          rel="noopener"
+          >{{ _('Go to my LinkedIn') }} &rarr;</a
+        >
+      </div>
+    </section>
+
+    <!-- Beginning of Features section -->
+    <section class="section-features" id="features">
+      <div class="feature">
+        <div class="feature__title mb-lg txt-center">
+          <h2 class="heading-2 heading-2--display">{{ _('Services') }}</h2>
+        </div>
+        <div class="feature__box">
+          <!-- Card 1 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-books"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('Homework Coaching') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _("I'm here to support you with homework, from K4 - K12 grade,
+                across diverse subjects.") }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-calculator"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('Math Tutoring') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('Expert guidance for mastering mathematical concepts and
+                problem-solving skills.') }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-spell-check"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('English Course') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('Suitable for individuals of all ages, catering to both social
+                and professional communication needs.') }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-file-excel"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('MS Excel Course') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('A beginner-friendly MS Excel course providing essential skills
+                for effective spreadsheet use.') }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-python"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('Python for Beginners') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('Introduction to programming with Python, ideal for those new to
+                coding.') }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-embed2"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('WebDev Course') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('Entry-level course to kickstart web development skills and
+                create basic websites.') }}
+              </p>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-calendar"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('Schedule') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('We operate every day of the year, from') }}
+                <span>6:00 am to 11:00 pm</span>.
+              </p>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="feature__card">
+            <div class="feature__card--item">
+              <svg class="feature__card--icon mb-sm">
+                <use xlink:href="{{ url_for('static', filename='img/sprite.svg') }}#icon-bubbles4"></use>
+              </svg>
+              <h3 class="heading-3 mb-xs">{{ _('Languages') }}</h3>
+              <p class="paragraph txt-center">
+                {{ _('We are fluent in
+                <span>English and Spanish</span>, offering bilingual classes for
+                seamless communication.') }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beginning of CTA section -->
+    <section class="section-cta" id="cta">
+      <div class="cta">
+        <div class="cta__form">
+          <form action="{{ url_for('main.contact') }}#cta" method="post" class="form" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+            <input type="hidden" name="_anchor" value="cta">
+            <div class="form__text">
+              <h2 class="heading-2 mb-sm">{{ _('How can I help?') }}</h2>
+            </div>
+
+            <div class="form__group">
+              {{ form.full_name.label }}
+              {{ form.full_name(id="full_name", placeholder="Jane Smith") }}
+
+              {% if form.full_name.errors %}
+                <ul class="errors">
+                {% for error in form.full_name.errors %}
+                  <span style="color:red">
+                    <p class="paragraph">{{ error }}</p>
+                  </span>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="form__group">
+              {{ form.email.label }}
+              {{ form.email(id="email", placeholder="jane@email.com") }}
+
+              {% if form.email.errors %}
+                <ul class="errors">
+                {% for error in form.email.errors %}
+                  <span style="color:red">
+                    <p class="paragraph">{{ error }}</p>
+                  </span>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="form__group">
+              {{ form.options.label }}
+              {{ form.options(id="options") }}
+
+              {% if form.options.errors %}
+                <ul class="errors">
+                {% for error in form.options.errors %}
+                  <span style="color:red">
+                    <p class="paragraph">{{ error }}</p></span>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="form__group mb-md">
+              {{ form.message.label }}
+              {{ form.message(id="message", placeholder=_("Hi there, I'm interested in..."), spellcheck="true", cols="30", rows="5") }}
+
+              {% if form.message.errors %}
+                <ul class="errors">
+                {% for error in form.message.errors %}
+                  <span style="color:red">
+                    <p class="paragraph">{{ error }}</p></span>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            {{ form.submit(class="btn btn--form", id="submit") }}
+          </form>
+        </div>
+      </div>
+    </section>
+
+{% include 'footer.html' %}
+{% endblock %}

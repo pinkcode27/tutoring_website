@@ -1,0 +1,348 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-10-16 12:08-0500\n"
+"PO-Revision-Date: 2023-10-16 12:16-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.0\n"
+
+#: app/forms.py:9
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#: app/forms.py:10
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#: app/forms.py:11
+msgid "What are you after?"
+msgstr "¿En qué te puedo ayudar?"
+
+#: app/forms.py:12
+msgid "Please choose one option:"
+msgstr "Por favor, elija una opción:"
+
+#: app/forms.py:12
+msgid "general"
+msgstr "general"
+
+#: app/forms.py:12
+msgid "I have a general inquiry"
+msgstr "Tengo una pregunta general"
+
+#: app/forms.py:13
+msgid "tutoring"
+msgstr "tutoría"
+
+#: app/forms.py:13
+msgid "I need tutoring"
+msgstr "Necesito tutoría"
+
+#: app/forms.py:13
+msgid "english"
+msgstr "inglés"
+
+#: app/forms.py:13
+msgid "I need English classes"
+msgstr "Necesito clases de inglés"
+
+#: app/forms.py:14
+msgid "pyhton"
+msgstr "python"
+
+#: app/forms.py:14
+msgid "I need Python classes"
+msgstr "Necesito clases de Python"
+
+#: app/forms.py:14
+msgid "web-dev"
+msgstr "Desarrollo de páginas web"
+
+#: app/forms.py:14
+msgid "I need Web Dev classes"
+msgstr "Necesito clases de web-dev"
+
+#: app/forms.py:15
+msgid "I need MS Excel classes"
+msgstr "Necesito clases de Excel"
+
+#: app/forms.py:15
+msgid "other"
+msgstr "otro"
+
+#: app/forms.py:15
+msgid "Other"
+msgstr "Otro"
+
+#: app/forms.py:17
+msgid "Message"
+msgstr "Mensaje"
+
+#: app/forms.py:18
+msgid "Send Message"
+msgstr "Enviar mensaje"
+
+#: app/routes.py:30
+msgid "Your message has been sent successfully!"
+msgstr "Tu mensaje ha sido enviado!"
+
+#: app/routes.py:34
+msgid "An error occurred while sending the email. Please try again later."
+msgstr ""
+"Un error ocurrió tratando de enviar el mensaje. Intenta mas tarde por "
+"favor."
+
+#: app/templates/base.html:8
+msgid ""
+"Unlock Academic Success: Our website offers expert tutoring, homework "
+"coaching, and courses\n"
+"      in English and Spanish for K4-K12 students. Learn Python, web "
+"development, and MS Excel for beginners."
+msgstr ""
+"Descubre el éxito académico: nuestro sitio web ofrece tutoría experta, "
+"asesoramiento en tareas y cursos en inglés para estudiantes de primaria a"
+" secundaria. Aprende Python, desarrollo web y MS Excel para "
+"principiantes."
+
+#: app/templates/base.html:20
+msgid "Today's Tutoring"
+msgstr "Tutorías"
+
+#: app/templates/footer.html:32
+msgid ""
+"by Elena Murga. All rights\n"
+"          reserved. Illustrations by"
+msgstr ""
+"por Elena Murga. Todos los derechos\n"
+"         reservados. Ilustraciones por"
+
+#: app/templates/header.html:5
+msgid "Home"
+msgstr "Inicio"
+
+#: app/templates/header.html:8
+msgid "About"
+msgstr "Sobre Mi"
+
+#: app/templates/header.html:11 app/templates/index.html:134
+msgid "Services"
+msgstr "Servicios"
+
+#: app/templates/header.html:14
+msgid "Contact"
+msgstr "Contacto"
+
+#: app/templates/index.html:14
+msgid "Elevate Your Learning With Expert Tutoring."
+msgstr "Eleva tu aprendizaje con tutores expertos."
+
+#: app/templates/index.html:17
+msgid ""
+"With over a decade of experience in education, our tutoring service "
+"company\n"
+"            has a proven track record of helping students achieve "
+"academic excellence.\n"
+"            We empower students on their journey to success, setting a "
+"gold standard\n"
+"            in educational achievement."
+msgstr ""
+"Con más de una década de experiencia en educación, nuestra empresa de\n"
+"servicios de tutoría tiene un historial comprobado de ayudar a los "
+"estudiantes\n"
+"a alcanzar la excelencia académica. Empoderamos a los estudiantes en su "
+"camino\n"
+"hacia el éxito, estableciendo un estándar de oro en logros educativos."
+
+#: app/templates/index.html:22
+msgid "Get Started"
+msgstr "Empieza hoy"
+
+#: app/templates/index.html:27
+msgid "The learner explorer"
+msgstr "El aprendíz explorador"
+
+#: app/templates/index.html:86
+msgid "About Me"
+msgstr "Sobre Mi"
+
+#: app/templates/index.html:99
+msgid ""
+"Welcome to my tutoring and coaching services! I'm Elena, a dedicated\n"
+"            tutor with over a decade of experience in math, English, MS "
+"Excel,\n"
+"            Python, and web development. I hold a Bachelor's in "
+"Information\n"
+"            Technology and Industrial Engineering, and an Associate's in "
+"Math\n"
+"            Education. I'm fluent in English and Spanish, and all "
+"sessions are\n"
+"            bilingual."
+msgstr ""
+"¡Bienvenido a mis servicios de tutoría y coaching! Soy Elena, una \n"
+"tutora dedicada con más de una década de experiencia en matemáticas, "
+"inglés, \n"
+"MS Excel, Python y desarrollo web. Tengo una Ingeniería en Tecnología de "
+"la Información\n"
+"y otra en Ingeniería Industrial y un Asociado en Educación Secundaria de "
+"Matemáticas. \n"
+"Hablo inglés y español con fluidez y todas las sesiones son bilingües."
+
+#: app/templates/index.html:107
+msgid ""
+"I'm here to support all students on their academic journey,\n"
+"            regardless of their background. Whether you need help with "
+"homework,\n"
+"            want to learn a new programming language, or aim to improve "
+"your\n"
+"            English skills. I've had the privilege of working with "
+"students from\n"
+"            all levels of ability, including students from prestigious "
+"South\n"
+"            Florida private schools like Ransom Everglades and Miami "
+"Country\n"
+"            Day. I'm confident that together, we can achieve your goals. "
+"Don't\n"
+"            hesitate to reach out and start your learning journey with me"
+" today!"
+msgstr ""
+"Estoy aquí para apoyar a todos los estudiantes en su trayectoria "
+"académica\n"
+", independientemente de sus antecedentes. Ya sea que necesite ayuda con "
+"la tarea, \n"
+"desee aprender un nuevo lenguaje de programación o desee mejorar sus "
+"habilidades en \n"
+"inglés. He tenido el privilegio de trabajar con estudiantes de todos los "
+"niveles, \n"
+"incluidos estudiantes de prestigiosas escuelas privadas del sur de "
+"Florida como Ransom Everglades \n"
+"y Miami Country Day. Estoy segura de que juntos podremos lograr tus "
+"objetivos. ¡No dudes en \n"
+"comunicarte y comenzar tu viaje de aprendizaje conmigo hoy!"
+
+#: app/templates/index.html:125
+msgid "Go to my LinkedIn"
+msgstr "Visita mi LinkedIn"
+
+#: app/templates/index.html:143
+msgid "Homework Coaching"
+msgstr ""
+
+#: app/templates/index.html:145
+msgid ""
+"I'm here to support you with homework, from K4 - K12 grade,\n"
+"                across diverse subjects."
+msgstr ""
+"Estoy aquí para ayudarte con tú tarea, de primaria a secundaria,\n"
+"                de cualquier materia."
+
+#: app/templates/index.html:156
+msgid "Math Tutoring"
+msgstr "Tutorías de matemáticas"
+
+#: app/templates/index.html:158
+msgid ""
+"Expert guidance for mastering mathematical concepts and\n"
+"                problem-solving skills."
+msgstr ""
+"Guía experta para dominar conceptos de matemáticas y\n"
+"               habilidades de resolución de problemas."
+
+#: app/templates/index.html:169
+msgid "English Course"
+msgstr "Curso de Inglés"
+
+#: app/templates/index.html:171
+msgid ""
+"Suitable for individuals of all ages, catering to both social\n"
+"                and professional communication needs."
+msgstr ""
+"Adecuado para personas de todas las edades, para tus necesidades\n"
+"       de comunicación sociales y/o profesionales."
+
+#: app/templates/index.html:182
+msgid "MS Excel Course"
+msgstr "Curso de MS Excel"
+
+#: app/templates/index.html:184
+msgid ""
+"A beginner-friendly MS Excel course providing essential skills\n"
+"                for effective spreadsheet use."
+msgstr ""
+"Un curso de MS Excel para principiantes que proporciona habilidades\n"
+"               esenciales para el uso eficaz de hojas de cálculo."
+
+#: app/templates/index.html:195
+msgid "Python for Beginners"
+msgstr "Python para Principiantes"
+
+#: app/templates/index.html:197
+msgid ""
+"Introduction to programming with Python, ideal for those new to\n"
+"                coding."
+msgstr ""
+"Introducción a la programación con Python, ideal para quienes\n"
+"               son nuevos programando."
+
+#: app/templates/index.html:208
+msgid "WebDev Course"
+msgstr "Desarrollo Páginas Web"
+
+#: app/templates/index.html:210
+msgid ""
+"Entry-level course to kickstart web development skills and\n"
+"                create basic websites."
+msgstr ""
+"Curso de nivel básico para impulsar las habilidades de \n"
+"                desarrollo web y crear sitios web básicos."
+
+#: app/templates/index.html:221
+msgid "Schedule"
+msgstr "Horarios"
+
+#: app/templates/index.html:223
+msgid "We operate every day of the year, from"
+msgstr "Operamos todos los días del año, de"
+
+#: app/templates/index.html:234
+msgid "Languages"
+msgstr "Idiomas"
+
+#: app/templates/index.html:236
+msgid ""
+"We are fluent in\n"
+"                <span>English and Spanish</span>, offering bilingual "
+"classes for\n"
+"                seamless communication."
+msgstr "Clases bilingües en inglés y español."
+
+#: app/templates/index.html:255
+msgid "How can I help?"
+msgstr "¿Cómo te puedo ayudar?"
+
+#: app/templates/index.html:302
+msgid "Hi there, I'm interested in..."
+msgstr "Hola, estoy interesado en..."
+
+#: app/templates/errors/404.html:12
+msgid "File Not Found"
+msgstr "Archivo No Encontrado"
+
+#: app/templates/errors/500.html:12
+msgid "An unexpected error has occurred"
+msgstr "Ocurrió un error inesperado"
+
+#: app/templates/errors/500.html:13
+msgid "The administration has been notified. Sorry for the inconvenience!"
+msgstr "La administración ha sido notificada. ¡Perdón por los inconvenientes ocasionados!"

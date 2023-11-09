@@ -1,0 +1,57 @@
+.section-hero {
+  grid-column: full-start / full-end;
+  padding: 10rem;
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(min-content, 1fr);
+
+  @include respond(phone-mid) {
+    padding: 10rem 8rem 10rem 8rem;
+  }
+
+  @include respond(phone-port) {
+    padding: 10rem 6rem 10rem 6rem;
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: $screen568),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: $screen568),
+    (min-width: $screen1600) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-bg-3, 0.5),
+        rgba($color-bg-3, 0.5)
+      ),
+      url("../img/hero-bg-2x-comp.jpg");
+  }
+}
+
+.section-about {
+  grid-column: center-start / center-end;
+  padding: 15rem 0;
+
+  @include respond(small-laptop) {
+    padding: 10rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 7rem 0;
+  }
+}
+
+.section-features {
+  grid-column: center-start / center-end;
+}
+
+.section-cta {
+  grid-column: col-end 1 / col-end 7;
+  padding: 15rem 0;
+
+  @include respond(tab-land) {
+    padding: 10rem 0;
+  }
+}

@@ -1,0 +1,94 @@
+.about {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: var(--shadow-dark);
+  color: var(--color-about);
+  background-color: var(--color-bg-about);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewX(-12deg);
+
+  @include respond(tab-land) {
+    width: 85%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone-land) {
+    width: 100%;
+    transform: skewX(0);
+    padding-left: 5rem;
+    border-radius: 5rem;
+  }
+
+  &__title {
+    transform: skewX(12deg);
+
+    @include respond(phone-land) {
+      transform: skewX(0);
+    }
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+
+    // if we want the element that looks like a circle
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-5rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+
+    @include respond(phone-land) {
+      transform: translateX(-3rem) skewX(0);
+    }
+
+    @include respond(phone-mid) {
+      transform: translateX(-2rem) skewX(0);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateX(-0.2rem) scale(1.4);
+    transition: all 0.3s;
+  }
+
+  &:hover &__img {
+    transform: translateX(0) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: var(--color-caption);
+    text-transform: uppercase;
+    font-size: calc(#{fluid(1.6rem, 1.7rem)});
+    font-weight: 400;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    transform: skewX(12deg);
+    line-height: 1.8;
+
+    @include respond(phone-land) {
+      transform: skewX(0);
+    }
+  }
+}

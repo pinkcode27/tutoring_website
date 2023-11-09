@@ -1,0 +1,135 @@
+.hero {
+  background-color: rgba($color-secondary, 0.5);
+  -webkit-backdrop-filter: blur(2rem) saturate(1.6);
+  backdrop-filter: blur(2rem) saturate(1.6);
+  border-radius: 5rem;
+  padding: calc(#{fluid(3rem, 6rem)});
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: minmax(50rem, 65vh);
+
+  &__sent {
+    grid-template-columns: minmax(min-content, max-content);
+    grid-template-rows: minmax(min-content, max-content);
+
+    @include respond(tab-land) {
+      grid-template-rows: minmax(min-content, max-content) !important;
+    }
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(min-content, 1fr);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-auto-rows: minmax(min-content, max-content);
+  }
+
+  &__title {
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    color: var(--color-primary);
+  }
+
+  &__picture {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    position: relative;
+
+    @include respond(tab-land) {
+      grid-template-rows: repeat(7, 9vw);
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__heading {
+    font-size: calc(#{fluid(1.4rem, 2.8rem)});
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: right;
+    color: var(--color-primary);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45%;
+
+    @include respond(tab-land) {
+      width: 36%;
+    }
+
+    @include respond(phone-land) {
+      width: 44%;
+    }
+
+    @include respond(phone-mid) {
+      width: 56%;
+    }
+
+    @include respond(phone-port) {
+      width: 68%;
+    }
+  }
+
+  &__heading-span {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-bg-4, 0.85),
+      rgba($color-bg-1, 0.85)
+    );
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  &__item {
+    &--1 {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      transform: rotate(25deg);
+      z-index: -2;
+      filter: drop-shadow(2px 4px 6px #aaa);
+    }
+
+    &--2 {
+      grid-column: 1;
+      grid-row: 1;
+      transform: rotate(36deg);
+    }
+
+    &--3 {
+      grid-column: 8 / 9;
+      grid-row: 6 / 7;
+      transform: rotate(36deg);
+      z-index: -1;
+    }
+
+    &--4 {
+      grid-column: 1 / span 2;
+      grid-row: 6 / span 2;
+    }
+
+    &--5 {
+      grid-column: 7 / -1;
+      grid-row: 1 / span 2;
+
+      @include respond(tab-land) {
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'header.html' %}
+
+<section class="section-hero" style="background-image: linear-gradient(
+      to right bottom,
+      rgba(174, 226, 255, 0.5),
+      rgba(174, 226, 255, 0.5)
+    ), url({{url_for('static', filename='img/hero-bg.jpg')}} )";>
+    <div class="hero hero__sent">
+        <div class="txt-center">
+            <h1 class="heading-1">{{ _('An unexpected error has occurred') }}</h1>
+            <p class="paragraph">{{ _('The administration has been notified. Sorry for the inconvenience!') }}</p>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

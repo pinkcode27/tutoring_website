@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, min-content) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 150rem) [col-end]
+    )
+    [center-end]
+    minmax(6rem, min-content) [full-end]; // 1200 /8 = 15rem
+
+  @include respond(phone-port) {
+    grid-template-columns:
+      [full-start] minmax(4rem, min-content) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 150rem) [col-end]
+      )
+      [center-end]
+      minmax(4rem, min-content) [full-end];
+  }
+}

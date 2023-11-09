@@ -1,0 +1,32 @@
+$default-min-vw: 46.8rem;
+$default-max-vw: 160rem;
+
+// @function rnd($number, $decimals: 0) {
+//   $n: 1;
+
+//   @if $decimals > 0 {
+//     @for $i from 1 through $decimals {
+//       $n: $n * 10;
+//     }
+//   }
+
+//   @return rnd(($number * $n) / $n);
+// }
+
+@function fluid(
+  $min-size,
+  $max-size,
+  $min-breakpoint: $default-min-vw,
+  $max-breakpoint: $default-max-vw,
+  $unit: vw
+) {
+  $slope: ($max-size - $min-size) / ($max-breakpoint - $min-breakpoint);
+  $slope-to-unit: $slope * 100;
+  $intercept: $min-size - $slope * $min-breakpoint;
+
+  @return clamp(
+    #{$min-size},
+    #{$slope-to-unit}#{$unit} + #{$intercept},
+    #{$max-size}
+  );
+}
