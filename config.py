@@ -3,11 +3,14 @@ import ssl
 from decouple import config
 import certifi  # pip install certifi
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Config:
     SECRET_KEY = config('SECRET_KEY', default=os.urandom(32))
-    DEBUG = config('DEBUG', default=True, cast=bool)
+    DEBUG = config('DEBUG', default=False, cast=bool)
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = config('MAIL_USE_TLS', default=True, cast=bool)
@@ -17,6 +20,7 @@ class Config:
     MAIL_PASSWORD = config('MAIL_PASSWORD', default=os.getenv('PASSWORD'))
     HERO_BG_IMG = 'hero-bg-2x-comp.jpg'
     HERO_BG_IMG_PATH = os.path.join('img', HERO_BG_IMG)
+    ADMINS = [config('ADMINS', default=os.getenv('ADMIN_EMAIL'))]
     LANGUAGES = {
         'en': 'English',
         'es': 'Español'

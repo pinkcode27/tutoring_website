@@ -4,7 +4,7 @@ import logging
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from app import app
-from threading import Thread
+from concurrent.futures import ThreadPoolExecutor
 
 
 class EmailMessage:
@@ -97,5 +97,5 @@ class EmailSender:
             except Exception as e:
                 logging.error(f'Error sending email: {e}')
 
-        email_thread = Thread(target=send)
-        email_thread.start()
+        with ThreadPoolExecutor() as executor:
+            executor.submit(send)
