@@ -98,4 +98,5 @@ class EmailSender:
                 logging.error(f'Error sending email: {e}')
 
         with ThreadPoolExecutor() as executor:
-            executor.submit(send)
+            future = executor.submit(send)
+            future.result()
