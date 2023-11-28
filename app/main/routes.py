@@ -5,8 +5,6 @@ from app.email_sender import EmailMessage, EmailSender
 from flask_babel import _
 from app.main import bp
 import logging
-# pip install python-dotenv
-# pip freeze >requirements.txt
 
 
 @bp.route('/')

@@ -42,7 +42,7 @@ class EmailMessage:
         """
         msg = MIMEMultipart()
         msg['From'] = f'{self.sender_name} <{self.sender_email}>'
-        msg['To'] = f'{self.sender_email}'
+        msg['To'] = f'{app.config["MAIL_USERNAME"]}'
         msg['Subject'] = self.subject
         message = f'''
                 Name: {self.sender_name}\n
@@ -58,20 +58,20 @@ class EmailSender:
     Sends email messages using SMTP.
 
     Attributes:
-        sender_email (str): The email address of the sender.
-        sender_password (str): The password of the sender's email account.
+        admin_email (str): The email address of the sender.
+        admin_password (str): The password of the sender's email account.
     """
 
-    def __init__(self, sender_email, sender_password):
+    def __init__(self, admin_email, admin_password):
         """
         Initialize an EmailSender object.
 
         Args:
-            sender_email (str): The email address of the sender.
-            sender_password (str): The password of the sender's email account.
+            admin_email (str): The email address of the sender.
+            admin_password (str): The password of the sender's email account.
         """
-        self.sender_email = sender_email
-        self.sender_password = sender_password
+        self.admin_email = admin_email
+        self.admin_password = admin_password
 
     def send_email(self, email_message):
         """
@@ -89,8 +89,8 @@ class EmailSender:
             try:
                 with smtplib.SMTP(app.config['MAIL_SERVER'], app.config['MAIL_PORT']) as connection:
                     connection.starttls(context=app.config['CONTEXT'])
-                    connection.login(user=self.sender_email, password=self.sender_password)
-                    connection.sendmail(from_addr=self.sender_email, to_addrs=[email_message.sender_email],
+                    connection.login(user=self.admin_email, password=self.admin_password)
+                    connection.sendmail(from_addr=self.admin_email, to_addrs=[self.admin_email],
                                         msg=msg.as_string())
             except smtplib.SMTPException as e:
                 logging.error(f'SMTP Error: {e}')
@@ -98,5 +98,4 @@ class EmailSender:
                 logging.error(f'Error sending email: {e}')
 
         with ThreadPoolExecutor() as executor:
-            future = executor.submit(send)
-            future.result()
+            executor.submit(send)
