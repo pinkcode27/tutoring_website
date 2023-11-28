@@ -6,4 +6,4 @@ cli.regsiter(app)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
-    app.run(debug=True, threaded=True)
+    app.run(debug=False, threaded=True)
