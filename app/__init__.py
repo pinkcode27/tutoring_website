@@ -1,15 +1,21 @@
-from flask import Flask, request
+from flask import Flask, request, session, g
 from config import Config
 from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 from flask_babel import Babel
+from flask_caching import Cache
+from flask_session import Session
 import logging
 import os
 
 
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'].keys())
+
+
 app = Flask(__name__)
 app.config.from_object(Config)
-babel = Babel(app)
+babel = Babel(app, locale_selector=get_locale)
 
 from app.errors import bp as errors_bp
 app.register_blueprint(errors_bp)
@@ -45,7 +51,3 @@ if not app.debug:
 
     app.logger.setLevel(logging.INFO)
     app.logger.info('Tutoring Website')
-
-
-def get_locale():
-    return request.accept_languages.best_match(app.config['LANGUAGES'].keys())

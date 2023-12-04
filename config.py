@@ -4,6 +4,7 @@ from decouple import config
 import certifi  # pip install certifi
 from pathlib import Path
 from dotenv import load_dotenv
+from datetime import timedelta
 
 load_dotenv()
 
@@ -25,4 +26,3 @@ class Config:
         'en': 'English',
         'es': 'Español'
     }
-    BABEL_DEFAULT_LOCALE = 'en'
