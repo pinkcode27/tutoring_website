@@ -1,10 +1,8 @@
-from flask import Flask, request, session, g
+from flask import Flask, request
 from config import Config
 from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 from flask_babel import Babel
-from flask_caching import Cache
-from flask_session import Session
 import logging
 import os
 
