@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-10-16 12:08-0500\n"
+"POT-Creation-Date: 2023-12-07 20:47-0600\n"
 "PO-Revision-Date: 2023-10-16 12:16-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,87 +18,87 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.0\n"
 
-#: app/forms.py:9
+#: app/main/forms.py:9
 msgid "Full Name"
 msgstr "Nombre Completo"
 
-#: app/forms.py:10
+#: app/main/forms.py:10
 msgid "Email"
 msgstr "Correo Electrónico"
 
-#: app/forms.py:11
+#: app/main/forms.py:11
 msgid "What are you after?"
 msgstr "¿En qué te puedo ayudar?"
 
-#: app/forms.py:12
+#: app/main/forms.py:12
 msgid "Please choose one option:"
 msgstr "Por favor, elija una opción:"
 
-#: app/forms.py:12
+#: app/main/forms.py:12
 msgid "general"
 msgstr "general"
 
-#: app/forms.py:12
+#: app/main/forms.py:12
 msgid "I have a general inquiry"
 msgstr "Tengo una pregunta general"
 
-#: app/forms.py:13
+#: app/main/forms.py:13
 msgid "tutoring"
 msgstr "tutoría"
 
-#: app/forms.py:13
+#: app/main/forms.py:13
 msgid "I need tutoring"
 msgstr "Necesito tutoría"
 
-#: app/forms.py:13
+#: app/main/forms.py:13
 msgid "english"
 msgstr "inglés"
 
-#: app/forms.py:13
+#: app/main/forms.py:13
 msgid "I need English classes"
 msgstr "Necesito clases de inglés"
 
-#: app/forms.py:14
+#: app/main/forms.py:14
 msgid "pyhton"
 msgstr "python"
 
-#: app/forms.py:14
+#: app/main/forms.py:14
 msgid "I need Python classes"
 msgstr "Necesito clases de Python"
 
-#: app/forms.py:14
+#: app/main/forms.py:14
 msgid "web-dev"
 msgstr "Desarrollo de páginas web"
 
-#: app/forms.py:14
+#: app/main/forms.py:14
 msgid "I need Web Dev classes"
 msgstr "Necesito clases de web-dev"
 
-#: app/forms.py:15
+#: app/main/forms.py:15
 msgid "I need MS Excel classes"
 msgstr "Necesito clases de Excel"
 
-#: app/forms.py:15
+#: app/main/forms.py:15
 msgid "other"
 msgstr "otro"
 
-#: app/forms.py:15
+#: app/main/forms.py:15
 msgid "Other"
 msgstr "Otro"
 
-#: app/forms.py:17
+#: app/main/forms.py:17
 msgid "Message"
 msgstr "Mensaje"
 
-#: app/forms.py:18
+#: app/main/forms.py:18
 msgid "Send Message"
 msgstr "Enviar mensaje"
 
-#: app/routes.py:30
+#: app/main/routes.py:29
 msgid "Your message has been sent successfully!"
 msgstr "Tu mensaje ha sido enviado!"
 
-#: app/routes.py:34
+#: app/main/routes.py:33
 msgid "An error occurred while sending the email. Please try again later."
 msgstr ""
 "Un error ocurrió tratando de enviar el mensaje. Intenta mas tarde por "
@@ -116,7 +116,7 @@ msgstr ""
 " secundaria. Aprende Python, desarrollo web y MS Excel para "
 "principiantes."
 
-#: app/templates/base.html:20
+#: app/templates/base.html:27
 msgid "Today's Tutoring"
 msgstr "Tutorías"
 
@@ -134,9 +134,9 @@ msgstr "Inicio"
 
 #: app/templates/header.html:8
 msgid "About"
-msgstr "Sobre Mi"
+msgstr "Sobre Mí"
 
-#: app/templates/header.html:11 app/templates/index.html:134
+#: app/templates/header.html:11 app/templates/index.html:135
 msgid "Services"
 msgstr "Servicios"
 
@@ -144,11 +144,11 @@ msgstr "Servicios"
 msgid "Contact"
 msgstr "Contacto"
 
-#: app/templates/index.html:14
+#: app/templates/index.html:13
 msgid "Elevate Your Learning With Expert Tutoring."
 msgstr "Eleva tu aprendizaje con tutores expertos."
 
-#: app/templates/index.html:17
+#: app/templates/index.html:16
 msgid ""
 "With over a decade of experience in education, our tutoring service "
 "company\n"
@@ -165,19 +165,19 @@ msgstr ""
 "camino\n"
 "hacia el éxito, estableciendo un estándar de oro en logros educativos."
 
-#: app/templates/index.html:22
+#: app/templates/index.html:21
 msgid "Get Started"
 msgstr "Empieza hoy"
 
-#: app/templates/index.html:27
+#: app/templates/index.html:26
 msgid "The learner explorer"
 msgstr "El aprendíz explorador"
 
-#: app/templates/index.html:86
+#: app/templates/index.html:85
 msgid "About Me"
-msgstr "Sobre Mi"
+msgstr "Sobre Mí"
 
-#: app/templates/index.html:99
+#: app/templates/index.html:100
 msgid ""
 "Welcome to my tutoring and coaching services! I'm Elena, a dedicated\n"
 "            tutor with over a decade of experience in math, English, MS "
@@ -199,7 +199,7 @@ msgstr ""
 "Matemáticas. \n"
 "Hablo inglés y español con fluidez y todas las sesiones son bilingües."
 
-#: app/templates/index.html:107
+#: app/templates/index.html:108
 msgid ""
 "I'm here to support all students on their academic journey,\n"
 "            regardless of their background. Whether you need help with "
@@ -231,15 +231,15 @@ msgstr ""
 "objetivos. ¡No dudes en \n"
 "comunicarte y comenzar tu viaje de aprendizaje conmigo hoy!"
 
-#: app/templates/index.html:125
+#: app/templates/index.html:126
 msgid "Go to my LinkedIn"
 msgstr "Visita mi LinkedIn"
 
-#: app/templates/index.html:143
+#: app/templates/index.html:144
 msgid "Homework Coaching"
 msgstr ""
 
-#: app/templates/index.html:145
+#: app/templates/index.html:146
 msgid ""
 "I'm here to support you with homework, from K4 - K12 grade,\n"
 "                across diverse subjects."
@@ -247,11 +247,11 @@ msgstr ""
 "Estoy aquí para ayudarte con tú tarea, de primaria a secundaria,\n"
 "                de cualquier materia."
 
-#: app/templates/index.html:156
+#: app/templates/index.html:157
 msgid "Math Tutoring"
 msgstr "Tutorías de matemáticas"
 
-#: app/templates/index.html:158
+#: app/templates/index.html:159
 msgid ""
 "Expert guidance for mastering mathematical concepts and\n"
 "                problem-solving skills."
@@ -259,11 +259,11 @@ msgstr ""
 "Guía experta para dominar conceptos de matemáticas y\n"
 "               habilidades de resolución de problemas."
 
-#: app/templates/index.html:169
+#: app/templates/index.html:170
 msgid "English Course"
 msgstr "Curso de Inglés"
 
-#: app/templates/index.html:171
+#: app/templates/index.html:172
 msgid ""
 "Suitable for individuals of all ages, catering to both social\n"
 "                and professional communication needs."
@@ -271,11 +271,11 @@ msgstr ""
 "Adecuado para personas de todas las edades, para tus necesidades\n"
 "       de comunicación sociales y/o profesionales."
 
-#: app/templates/index.html:182
+#: app/templates/index.html:183
 msgid "MS Excel Course"
 msgstr "Curso de MS Excel"
 
-#: app/templates/index.html:184
+#: app/templates/index.html:185
 msgid ""
 "A beginner-friendly MS Excel course providing essential skills\n"
 "                for effective spreadsheet use."
@@ -283,11 +283,11 @@ msgstr ""
 "Un curso de MS Excel para principiantes que proporciona habilidades\n"
 "               esenciales para el uso eficaz de hojas de cálculo."
 
-#: app/templates/index.html:195
+#: app/templates/index.html:196
 msgid "Python for Beginners"
 msgstr "Python para Principiantes"
 
-#: app/templates/index.html:197
+#: app/templates/index.html:198
 msgid ""
 "Introduction to programming with Python, ideal for those new to\n"
 "                coding."
@@ -295,11 +295,11 @@ msgstr ""
 "Introducción a la programación con Python, ideal para quienes\n"
 "               son nuevos programando."
 
-#: app/templates/index.html:208
+#: app/templates/index.html:209
 msgid "WebDev Course"
 msgstr "Desarrollo Páginas Web"
 
-#: app/templates/index.html:210
+#: app/templates/index.html:211
 msgid ""
 "Entry-level course to kickstart web development skills and\n"
 "                create basic websites."
@@ -307,19 +307,19 @@ msgstr ""
 "Curso de nivel básico para impulsar las habilidades de \n"
 "                desarrollo web y crear sitios web básicos."
 
-#: app/templates/index.html:221
+#: app/templates/index.html:222
 msgid "Schedule"
 msgstr "Horarios"
 
-#: app/templates/index.html:223
+#: app/templates/index.html:224
 msgid "We operate every day of the year, from"
 msgstr "Operamos todos los días del año, de"
 
-#: app/templates/index.html:234
+#: app/templates/index.html:235
 msgid "Languages"
 msgstr "Idiomas"
 
-#: app/templates/index.html:236
+#: app/templates/index.html:237
 msgid ""
 "We are fluent in\n"
 "                <span>English and Spanish</span>, offering bilingual "
@@ -327,11 +327,11 @@ msgid ""
 "                seamless communication."
 msgstr "Clases bilingües en inglés y español."
 
-#: app/templates/index.html:255
+#: app/templates/index.html:256
 msgid "How can I help?"
 msgstr "¿Cómo te puedo ayudar?"
 
-#: app/templates/index.html:302
+#: app/templates/index.html:305
 msgid "Hi there, I'm interested in..."
 msgstr "Hola, estoy interesado en..."
 
@@ -345,4 +345,7 @@ msgstr "Ocurrió un error inesperado"
 
 #: app/templates/errors/500.html:13
 msgid "The administration has been notified. Sorry for the inconvenience!"
-msgstr "La administración ha sido notificada. ¡Perdón por los inconvenientes ocasionados!"
+msgstr ""
+"La administración ha sido notificada. ¡Perdón por los inconvenientes "
+"ocasionados!"
+

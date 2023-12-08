@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect
+from flask import render_template, url_for, redirect, request, session
 from app import app
 from app.main.forms import *
 from app.email_sender import EmailMessage, EmailSender
@@ -51,3 +51,10 @@ def about():
 def features():
     form = ContactForm()
     return render_template('index.html', form=form)
+
+
+@bp.route('/set_language/<language>', methods=['GET', 'POST'])
+def set_language(language):
+    if language in app.config['LANGUAGES']:
+        session['language'] = language
+    return redirect(request.referrer or url_for('home'))

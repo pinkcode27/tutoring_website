@@ -279,6 +279,7 @@ body {
   .nav__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     padding: calc(1rem - 0.5rem);
     border-radius: 5rem;
@@ -299,11 +300,19 @@ body {
     padding: 1.2rem 2.4rem; }
     @media only screen and (max-width: 52.125em) {
       .nav__link:link, .nav__link:visited {
-        padding: 0.7rem 1.4rem; } }
+        padding: 0.7rem 1.2rem; } }
   .nav__link:hover, .nav__link:active {
     color: inherit;
     transform: translateY(-3px);
     text-shadow: var(--color-h1-h2-2) 1px 0 1rem; }
+  .nav__link--en:link, .nav__link--en:visited, .nav__link--es:link, .nav__link--es:visited {
+    font-size: calc(clamp(1.2rem, 0.17668vw + 1.11731rem, 1.4rem));
+    display: block;
+    border-radius: 50%; }
+  .nav__link--en:link, .nav__link--en:visited {
+    background-color: rgba(174, 226, 255, 0.5); }
+  .nav__link--es:link, .nav__link--es:visited {
+    background-color: rgba(253, 247, 195, 0.5); }
 
 .about {
   width: 75%;

@@ -8,6 +8,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     padding: calc(1rem - 0.5rem);
     border-radius: 5rem;
@@ -34,7 +35,7 @@
     padding: 1.2rem 2.4rem;
 
     @include respond(tab-port) {
-      padding: 0.7rem 1.4rem;
+      padding: 0.7rem 1.2rem;
     }
   }
 
@@ -43,5 +44,25 @@
     color: inherit;
     transform: translateY(-3px);
     text-shadow: var(--color-h1-h2-2) 1px 0 1rem;
+  }
+
+  &__link--en:link,
+  &__link--en:visited,
+  &__link--es:link,
+  &__link--es:visited {
+    font-size: calc(#{fluid(1.2rem, 1.4rem)});
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__link--en:link,
+  &__link--en:visited {
+    background-color: rgba($color-bg-3, 0.5);
+  }
+
+  &__link--es:link,
+  &__link--es:visited {
+    background-color: rgba($color-bg-2, 0.5);
+
   }
 }

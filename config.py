@@ -22,7 +22,4 @@ class Config:
     HERO_BG_IMG = 'hero-bg-2x-comp.jpg'
     HERO_BG_IMG_PATH = os.path.join('img', HERO_BG_IMG)
     ADMINS = [config('ADMINS', default=os.getenv('ADMIN_EMAIL'))]
-    LANGUAGES = {
-        'en': 'English',
-        'es': 'Español'
-    }
+    LANGUAGES = ['en', 'es']

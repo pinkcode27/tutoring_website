@@ -1,6 +1,6 @@
 <header class="header" id="#header">
     <nav class="nav">
-        <ul class="nav__list nav__list--blur">
+        <ul class="nav__list nav__list--blur txt-center">
             <li class="nav__item">
                 <a href="{{ url_for('main.home') }}" class="nav__link">{{ _('Home') }}</a>
             </li>
@@ -12,6 +12,13 @@
             </li>
             <li class="nav__item">
                 <a href="{{ url_for('main.contact') }}#cta" class="nav__link">{{ _('Contact') }}</a>
+            </li>
+            <li class="nav__item">
+                {% if session.get('language') == 'en' %}
+                    <a href="{{ url_for('main.set_language', language='es') }}" class="nav__link nav__link--es" title="Traducir">ES</a>
+                {% else %}
+                    <a href="{{ url_for('main.set_language', language='en') }}" class="nav__link nav__link--en" title="Translate">EN</a>
+                {% endif %}
             </li>
         </ul>
     </nav>

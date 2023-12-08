@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, session
 from config import Config
 from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
@@ -8,7 +8,9 @@ import os
 
 
 def get_locale():
-    return request.accept_languages.best_match(app.config['LANGUAGES'].keys())
+    if 'language' in session:
+        return session['language']
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 app = Flask(__name__)
