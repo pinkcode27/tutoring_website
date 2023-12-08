@@ -350,6 +350,7 @@ body {
 }
 @media only screen and (max-width: 52.125em) {
   .nav__link:link, .nav__link:visited {
+    font-size: calc(clamp(1.2rem, 0.1766784452vw + 1.1173144876rem, 1.4rem));
     padding: 0.7rem 1.2rem;
   }
 }
@@ -362,11 +363,6 @@ body {
   font-size: calc(clamp(1.2rem, 0.1766784452vw + 1.1173144876rem, 1.4rem));
   display: block;
   border-radius: 50%;
-}
-.nav__link--en:link, .nav__link--en:visited {
-  background-color: rgba(174, 226, 255, 0.5);
-}
-.nav__link--es:link, .nav__link--es:visited {
   background-color: rgba(253, 247, 195, 0.5);
 }
 
