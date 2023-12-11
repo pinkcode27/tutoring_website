@@ -5,13 +5,19 @@ from app.email_sender import EmailMessage, EmailSender
 from flask_babel import _
 from app.main import bp
 import logging
-
+from time import time
 
 @bp.route('/')
 def home():
     form = ContactForm()
-    return render_template('index.html', form=form, hero_bg_img=app.config['HERO_BG_IMG_PATH'])
-
+    timestamp = int(time())
+    return render_template('index.html', form=form, timestamp=timestamp, hero_bg_img=app.config['HERO_BG_IMG_PATH'])
+'''
+@bp.route('/your_route')
+def your_route():
+    timestamp = int(time())  # Generate a timestamp (you can use a version number or any changing value)
+    return render_template('your_template.html', timestamp=timestamp)
+'''
 
 @bp.route('/contact', methods=['GET', 'POST'])
 def contact():
