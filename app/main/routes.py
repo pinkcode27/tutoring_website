@@ -2,18 +2,22 @@ from flask import render_template, url_for, redirect, request, session
 from app import app
 from app.main.forms import *
 from app.email_sender import EmailMessage, EmailSender
-from flask_babel import _, refresh
+from flask_babel import _
 from app.main import bp
 import logging
 from time import time
-
 
 @bp.route('/')
 def home():
     form = ContactForm()
     timestamp = int(time())
     return render_template('index.html', form=form, timestamp=timestamp, hero_bg_img=app.config['HERO_BG_IMG_PATH'])
-
+'''
+@bp.route('/your_route')
+def your_route():
+    timestamp = int(time())  # Generate a timestamp (you can use a version number or any changing value)
+    return render_template('your_template.html', timestamp=timestamp)
+'''
 
 @bp.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -59,5 +63,4 @@ def features():
 def set_language(language):
     if language in app.config['LANGUAGES']:
         session['language'] = language
-        refresh()
     return redirect(request.referrer or url_for('home'))
