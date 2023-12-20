@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: pybabel compile -d app/translations; gunicorn main:app
